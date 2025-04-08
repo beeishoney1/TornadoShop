@@ -99,11 +99,6 @@ header {
   transform: translateX(0);
 }
 
-header:hover + .content .sidebar,
-.content .sidebar:hover {
-  transform: translateX(0);
-}
-
 .sidebar-menu {
   list-style: none;
 }
@@ -627,6 +622,11 @@ footer {
   .sidebar {
     height: calc(100vh - 100px - 48px);
     top: 100px;
+    transform: translateX(0);
+  }
+
+  header:hover + .content .sidebar,
+  .content .sidebar:hover {
     transform: translateX(0);
   }
 
