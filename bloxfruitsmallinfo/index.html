@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Torando-Shop-Small-Info</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <button class="menu-btn" id="menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="header-left">
+        <img src="../img/Main2.jpg" alt="Logo" class="logo" />
+        <span class="site-title">Torando Shop</span>
+      </div>
+    </header>
+
+    <div class="content">
+      <aside class="sidebar" id="sidebar">
+        <ul class="sidebar-menu">
+          <li>
+            <a href="../index.html">
+              <i class="fa-solid fa-gamepad"></i>
+              <span>Back-To-All </span>
+            </a>
+          </li>
+          <li>
+            <a href="../bloxfruitminimain/index.html">
+              <i class="fa-solid fa-gamepad"></i>
+              <span>Mini-BloxFruit</span>
+            </a>
+          </li>
+          <li>
+            <a href="../bloxfruitmain/index.html">
+              <i class="fa-solid fa-gamepad"></i>
+              <span>Main-BloxFruit</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fa-solid fa-gamepad"></i>
+              <span>Fruit-Price</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/UzuiTengen0">
+              <i class="fa-regular fa-user"></i>
+              <span>To-Contant-Admin</span>
+            </a>
+          </li>
+          <li>
+            <a href="../guide/help.html">
+              <i class="fa-regular fa-user"></i>
+              <span>Help-Support</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://t.me/TornadoShop0">
+              <i class="fa-regular fa-user"></i>  
+              <span>Join-Our-Telegram</span>
+            </a>
+          </li>
+        </ul>
+      </aside>
+    
+      <main>
+        <div class="search-container">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" placeholder="Search/Price eg.000,000 /00,000/00,00..." class="search-box" id="search-box" />
+        </div>
+        <div class="content-grid">
+          <!-- <div class="content-box">
+            <img src="../img/main1.jpg" alt="Item 1" class="content-img" />
+            <p class="content-text" data-text="Darkblade V3 + New Ft + 12Perms
+
+            Gamepass - All Gamepass (+2)">200,000MMK </p>
+            <button class="content-btn">Shop Now</button>
+          </div> -->
+          
+        </div>
+        <div class="text-popup" id="text-popup">
+          <p id="popup-text"></p>
+          <button class="close-btn" id="close-text-btn">Close</button>
+        </div>
+        <div class="image-viewer" id="image-viewer">
+          <img id="viewer-img" src="" alt="Full-size Image" />
+          <button class="close-btn" id="close-image-btn">Close</button>
+        </div>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2025 My Website. All rights reserved.</p>
+    </footer>
+  </div>
+  <script src="../action.js" onerror="console.error('Failed to load action.js. Please ensure the file exists in the correct directory.');"></script>
+  <script>
+    if (typeof toggleSidebar === 'undefined') {
+      console.warn('toggleSidebar function not found. Using fallback inline script.');
+      function toggleSidebar() {
+        console.log("Fallback: Toggling sidebar...");
+        const sidebar = document.getElementById('sidebar');
+        if (sidebar) {
+          const isOpen = sidebar.classList.contains('active');
+          sidebar.classList.toggle('active');
+          console.log("Fallback: Sidebar classList:", sidebar.classList);
+          sidebar.style.transform = isOpen ? 'translateX(-100%)' : 'translateX(0)';
+          console.log("Fallback: Sidebar transform:", sidebar.style.transform);
+        } else {
+          console.error("Fallback: Sidebar element not found!");
+        }
+      }
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log("Fallback: Setting up event listeners...");
+        const menuBtn = document.getElementById('menu-btn');
+        if (menuBtn) {
+          console.log("Fallback: Menu button found, adding event listeners.");
+          menuBtn.addEventListener('click', () => {
+            console.log("Fallback: Click event triggered on menu button");
+            toggleSidebar();
+          });
+          menuBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            console.log("Fallback: Touchstart event triggered on menu button");
+            toggleSidebar();
+          });
+          menuBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            console.log("Fallback: Touchend event triggered on menu button");
+            toggleSidebar();
+          });
+        } else {
+          console.error("Fallback: Menu button not found!");
+        }
+      });
+    }
+  </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92ced843bfacb06e',t:'MTc0NDA4NDY5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
