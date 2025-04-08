@@ -21,26 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  // Menu icon click functionality for mobile
+  // Menu icon tap functionality for mobile
   const menuBtn = document.getElementById('menu-btn');
   const sidebar = document.getElementById('sidebar');
 
   if (menuBtn && sidebar) {
-    // Remove any existing click listeners to prevent duplicates
+    // Remove any existing listeners to prevent duplicates
     menuBtn.removeEventListener('click', window.toggleSidebar);
-    // Only enable click toggle on mobile (≤768px)
+    menuBtn.removeEventListener('touchstart', window.toggleSidebar);
+
+    // Only enable tap toggle on mobile (≤768px)
     const isMobile = window.matchMedia('(max-width: 768px)').matches;
     if (isMobile) {
-      console.log('Mobile device detected, enabling click toggle for sidebar.');
+      console.log('Mobile device detected, enabling tap toggle for sidebar.');
       let isToggling = false; // Debounce flag to prevent rapid toggles
-      menuBtn.addEventListener('click', (e) => {
-        e.preventDefault(); // Prevent any default behavior
+
+      menuBtn.addEventListener('touchstart', (e) => {
+        e.preventDefault(); // Prevent default touch behavior
         if (isToggling) return; // Skip if already toggling
         isToggling = true;
         window.toggleSidebar();
         setTimeout(() => {
           isToggling = false;
         }, 300); // 300ms debounce to match CSS transition duration
+      });
+
+      // Prevent the click event from firing after touchstart
+      menuBtn.addEventListener('click', (e) => {
+        e.preventDefault(); // Prevent click event from triggering toggle
       });
     }
   } else {
